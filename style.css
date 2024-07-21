@@ -1,0 +1,874 @@
+html {
+    touch-action: manipulation;
+}
+
+/* For older browsers */
+body {
+    touch-action: none;
+}
+
+input[type="text"]:focus {
+  outline: none;
+border: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60%;
+    overflow-y: auto;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+  header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+  header #quiz-homepage{
+    background-color: #fdca54;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px; /*edit*/
+   
+  }
+  h1 {
+    font-size: 4rem;
+  }
+
+  /* NAVIGATION TAB */
+
+#nav-list{
+  list-style: none;
+  overflow: hidden;
+  background-color:#ffff ;
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   padding:0;
+   display: flex;
+  justify-content: center;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  z-index: 1;
+}
+
+#nav-list a{
+    color: #BBBBBB;
+    font-size: 16px;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-weight: bold;
+    text-decoration: none;
+  
+}
+
+#nav-list li{
+  display: inline;
+    float: left;
+    padding: 0 20px;
+}
+
+#nav-list ul{
+  list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-list i {
+  color: #BBBBBB;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+#nav-list li.active {
+  background-color: red;
+}
+
+  /* HOMEPAGEEEEEEEEEEEEEEEEEEE */
+
+  #search-bar .form-inline{
+    border-radius: 50px;
+    margin-top: 20px;
+
+    background-color: white;
+  }
+#search-bar #search-page {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+  #search-bar #word {
+    border-radius: 50px;
+}
+#search-bar #word:focus {
+            outline: none;
+            border: none;
+        }
+#search-bar #word1 {
+    width: 100%;
+    /*padding: 10px 40px 10px 20px; */
+     padding: 10px 40px 10px 10px;
+    border-radius: 25px;
+    outline: none;
+    font-size: 16px;
+    background: #8080801f;
+}
+
+#search-bar #word1:focus {
+            outline: none;
+            border: none;
+        }
+  
+  #search-bar .image-logo{
+    width: 150px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  #search-bar .btns{
+    font-size: 22px;  
+    width: 250px;  
+    margin: 20px 0 0 0;
+    padding: 10px 36px 5px;
+    text-decoration: none;
+    border: none;
+   background-color: #fdca54;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px; 
+    color: white; 
+    font-weight: 600; 
+  }
+.btns p{
+      font-size: 16px;
+      text-align: center;
+      font-weight: 400;
+  }
+  
+  /** STARTING PAGEE **/
+
+  body #main{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #fdca54;
+    flex-direction: column;
+  }
+
+  #main .main-logo{
+    height: 180px;
+    width: 180px;
+   
+  }
+
+  #main h1 {
+    font-family: 'georgia', sans-serif;
+   letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: -7px;  /*edit*/
+    color: #ffffff;
+   /* animation: bounce 1s infinite alternate;*/
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* GLOBAL STYLES */
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: 
+    typing 1.7s steps(20, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(255, 255, 255) }
+}
+
+/** SEARCH-PAGE **/
+
+#search-page .form-inline {
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdca54;
+    border-radius: 0;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+.wrapper{
+  text-align: center;
+  max-width: 100%;
+  width: 100%;
+/*  margin: -80px 0 0 0;*/
+
+}
+#word {
+  width: 70%; /* Adjust the input width based on your design */
+  padding: 10px; /* Add padding for better touch interaction */
+}
+
+#word1 {
+    width: 90%;
+    padding: 10px 50px 10px 0;
+}
+.form-inline button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: grid;/*edit*/
+   /*font-size: 18px;edit
+  flex: 0 0 20%; /* Adjust the button width based on your design */
+   font-size: 22px; /*edit*/
+  flex: 0 0 20%; /* Adjust the button width based on your design */
+
+}
+
+.form-inline input{
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+}
+
+#search-bar a {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+}
+.searchbar1 #search-form {
+            position: relative;
+            width: 70%;
+            max-width: 400px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+.ans .word {
+  text-align: center;
+  border-radius: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 45px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin: 20px auto;
+}
+
+
+/*need mag seperate ng audio container sa word h2 para steady na centered*/
+.audio-container {
+  display: inline;
+    border-radius: 50%;
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: rgb(220, 220, 220);
+    font-size: 20px;
+}
+
+.audio-container audio {
+  width: 100%;
+  max-width: 300px;
+}
+.fa-volume-high:before, .fa-volume-up:before {
+  content: "\f028";
+  font-size: 13px;
+}
+
+h2{
+  text-align: left;
+  margin-left: 20px;
+  overflow: hidden;
+  color: #333;
+}
+.def{
+  margin: 10px 20px 0 50px;
+  text-align: left;
+  font-size: 22px;
+}
+.halimbawa{
+  margin-top: 50px;
+}
+h2.halimbawa{
+  font-size: 23px;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.no-words-message {
+  color: #272727; /*edit*/
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 300px;
+}
+
+/** MINI QUIZ **/
+
+#def-quiz .container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  padding: 3px 8px; /*edit*/
+  height: auto;
+  margin-top: 70px; /*edit*/
+  
+  
+}
+
+.kwiz{
+  text-decoration: none;
+  color: #272727; /*edit*/
+
+}
+
+.kwiz:hover{
+  text-decoration: none;
+  color: #272727; /*edit*/
+}
+
+/* Content wrapper */
+#def-quiz .content {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Take full width of the container */
+  padding: 20px 3px; /*eedit*/
+ 
+  background-color: #d7e9ef;
+}
+
+/* Text content */
+#def-quiz .text {
+  flex: 1; /* Take remaining space */
+
+ 
+}
+
+#def-quiz h2{
+  overflow: hidden;
+  font-size: 22px; /*edit*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Image */
+#def-quiz .image {
+  flex-shrink: 0; /* Don't shrink the image */
+  width: 150px; /*edit*/
+}
+
+/* Responsive image */
+#def-quiz .image img {
+  max-width: 100%; /* Ensure image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+#tf-quiz .container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  padding: 3px 8px; /*edit*/
+  height: auto;
+
+}
+
+/* Content wrapper */
+#tf-quiz .content {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Take full width of the container */
+  padding: 20px 3px; /*eedit*/
+
+  background-color: #d7e9ef;
+}
+
+/* Text content */
+#tf-quiz .text {
+  flex: 1; /* Take remaining space */
+}
+
+#tf-quiz h2{
+  overflow: hidden;
+  font-size: 22px; /*edit*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Image */
+#tf-quiz .image {
+  flex-shrink: 0; /* Don't shrink the image */
+  width: 150px; /*edit*/
+}
+
+/* Responsive image */
+#tf-quiz .image img {
+  max-width: 100%; /* Ensure image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+#wordsearch-quiz .container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  padding: 3px 8px; /*edit*/
+  height: auto;
+}
+
+/* Content wrapper */
+#wordsearch-quiz .content {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  width: 100%; /* Take full width of the container */
+  padding: 20px 3px; /*eedit*/
+
+  background-color: #d7e9ef;
+}
+
+/* Text content */
+#wordsearch-quiz .text {
+  flex: 1; /* Take remaining space */
+}
+
+#wordsearch-quiz h2{
+  overflow: hidden;
+  font-size: 22px; /*edit*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Image */
+#wordsearch-quiz .image {
+  flex-shrink: 0; /* Don't shrink the image */
+  width: 150px; /*edit*/
+}
+
+/* Responsive image */
+#wordsearch-quiz .image img {
+  max-width: 100%; /* Ensure image doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/** ABOUT TALASALITAAN **/
+
+.about{
+  padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 60%;
+    overflow-y: auto;
+}
+
+.menu-btn {
+  background-color: transparent; /*edit*/
+  color: #272727; /*edit*/
+  padding: 16px;
+  font-size: 22px; /*edit*/
+  text-align: left; /*edit*/
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  width: 100%; /* Make button take full width */
+  position: relative; /* Position relative for arrow */
+  margin-bottom: 8px; /*edit*/
+ 
+}
+
+/* The container <div> - needed to position the menu content */
+.menu {
+  margin: 80px 0; /*edit*/
+
+}
+
+.menu-description {
+  display: none;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+
+/* Show the menu description */
+.show {
+  display: block;
+}
+
+/* Arrow icon */
+.arrow-up {
+  position: absolute;
+  top: 50%;
+  right: 16px; /* Adjust based on your button padding */
+  transform: translateY(-50%);
+  transition: transform 0.3s ease; /* Add transition effect */
+}
+
+/* Rotate arrow when description is showing */
+.menu-btn.rotate .arrow-up {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+#trans-button {
+ /* border: 10px;*/
+  background-color: transparent;
+ 
+}
+
+#trans-button img{
+  border-radius: 4px;
+  padding: 1px;
+  width: 25px;
+}
+#trans-button2 img{
+  border-radius: 4px;
+  padding: 1px;
+  width: 25px;
+}
+
+#trans-button2 {
+ /* border: 10px;*/
+  background-color: transparent;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center; 
+  margin: 20px 10px 0 10px;
+}
+
+#about #sentence3{
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#about #sentence2{
+  font-size: 18px;
+  margin-top: 10px;
+ 
+}
+#about #sentence{
+  font-size: 18px;
+  margin-top: 10px;
+
+}
+.img-mechanics3{
+  width: 100%;
+}
+.img-mechanics2{
+  width: 100%;
+}
+.img-mechanics1{
+  width: 100%;
+}
+@media only screen and (min-width: 1000px) {
+.img-mechanics1{
+  width: 30%;
+}
+#about #sentence{
+  font-size: 18px;
+  margin: 10px 450px;
+
+}
+.img-mechanics3{
+  width: 30%;
+}
+.img-mechanics2{
+  width: 30%;
+}
+#about #sentence3{
+  font-size: 18px;
+  margin: 10px 450px;
+  
+}
+
+#about #sentence2{
+  font-size: 18px;
+  margin: 10px 450px;
+
+}
+}
+
+
+/** INSERT WORD **/
+
+#insert-words table{
+  visibility: visible;
+}
+#insert-words th, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  font-size: 15px;
+  text-align: center;
+}
+
+#insert-words form {
+  margin: 0;
+   padding: 0;
+   display: grid;
+   place-content: center;
+   font-size: 15px;
+}
+
+#insert-words .insert h1{
+  text-align: center;
+}
+#insert-words a.insert-back{
+  font-size: 15px;
+  justify-content: center;
+  display: flex;
+  text-decoration: none;
+  color: black;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 700px) {
+  #insert-words form{
+    margin: 0;
+   padding: 0;
+   display: grid;
+   place-content: center;
+   font-size: 15px;
+  }
+  #insert-words h1{
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  #insert-words table{
+    margin: auto;
+    margin-top: 30px;
+    visibility: visible;
+  }
+  th {
+    color: white;
+  }
+  
+  td {
+    color: white;
+  }
+  
+  div.scrollmenu {
+    background-color: dodgerblue;
+    overflow: auto;
+    white-space: nowrap;
+  }
+  
+  div.scrollmenu th td {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+  }
+}
+
+/** ABOUT **/
+
+
+/* AUDIO PRONUNCIATION */
+
+.audio-container audio{
+  display: none;
+}
+
+.audio-container button{
+  border: none;
+  background-color: transparent;
+}
+
+.audio-container i{
+  font-size: 15px!important;
+}
+.word-list{
+  margin: 80px 0 80px 0;
+}
+
+.word-list .word{
+  font-size: 30px;
+  margin-top: 10px;
+}
+.list-words{
+  margin-top: 20px;
+}
+.eng{
+  font-size: 19px;
+  text-align: center;
+}
+
+/* Modal Styles */
+#info .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+#info .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  font-size: 20px;
+}
+@media only screen and (max-width: 800px) {
+  #info .modal-content {
+  margin: 30% auto;
+}
+}
+
+#info .close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.info-button {
+  position: fixed;
+  top: 5px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  font-size: 40px;
+}
+#info h4{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+#info p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+.fa-question-circle-o:before {
+  content: "\f29c";
+  font-size: 30px;
+  color: #333;
+}
+.fa-microphone:before {
+  content: "\f130";
+  color: #333;
+  font-size: 18px;
+}
+.fa-search:before {
+  content: "\f002";
+  color: #333;
+  font-size: 18px;
+}
+.searchbar1 .fa-search:before {
+  content: "\f002";
+  color: #33333375;
+  
+  font-size: 18px;
+ /* visibility: hidden;*/
+}
+/* Basic styling for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Basic styling for the dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.searchbar1 #searchButton{
+    position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #333;
+}
